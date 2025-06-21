@@ -1,0 +1,41 @@
+{
+    "name": "ginsen/uri",
+    "description": "Psr\\Http\\Message\\UriInterface value object for calls to internal containers",
+    "keywords": ["PSR", "Http", "Message", "Uri", "UriInterface", "url", "value-object", "docker", "containers"],
+    "homepage": "https://github.com/ginsen/uri",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "ginsen",
+            "email": "jgines@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "beberlei/assert": "^3.3",
+        "psr/http-message": "2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.2"
+    },
+    "suggest": {
+        "doctrine/dbal": "Install if you require Doctrine uri type"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ginsen\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ginsen\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "process-timeout": 0,
+        "sort-packages": true
+    }
+}
