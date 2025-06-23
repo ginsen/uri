@@ -1,9 +1,11 @@
 <?php
 
-namespace Ginsen\ValueObject;
+declare(strict_types=1);
+
+namespace Ginsen\Uri\ValueObject;
 
 use Assert\Assertion;
-use Ginsen\Exception\UriException;
+use Ginsen\Uri\Exception\UriException;
 use Psr\Http\Message\UriInterface;
 
 class Uri implements UriInterface

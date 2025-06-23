@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Ginsen\\": "src/"
+            "Ginsen\\Uri\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ginsen\\Tests\\": "tests/"
+            "Ginsen\\Uri\\Tests\\": "tests/"
         }
     },
     "config": {

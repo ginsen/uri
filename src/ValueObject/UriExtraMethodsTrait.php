@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ginsen\ValueObject;
+namespace Ginsen\Uri\ValueObject;
 
 trait UriExtraMethodsTrait
 {

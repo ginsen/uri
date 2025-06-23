@@ -1,6 +1,8 @@
 <?php
 
-namespace Ginsen\ValueObject;
+declare(strict_types=1);
+
+namespace Ginsen\Uri\ValueObject;
 
 use Psr\Http\Message\UriInterface;
 

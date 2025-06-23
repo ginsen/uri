@@ -1,9 +1,9 @@
 <?php
 
-namespace Ginsen\Tests\ValueObject;
+namespace Ginsen\Uri\Tests\ValueObject;
 
-use Ginsen\Exception\UriException;
-use Ginsen\ValueObject\Uri;
+use Ginsen\Uri\Exception\UriException;
+use Ginsen\Uri\ValueObject\Uri;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;

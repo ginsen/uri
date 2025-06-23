@@ -4,14 +4,14 @@
 
 This library has the following features:
 
-* The `Ginsen\ValueObject\Uri` instance complies with the [PSR UriInterface](https://www.php-fig.org/psr/psr-7/#35-psrhttpmessageuriinterface).
+* The `Ginsen\Uri\ValueObject\Uri` instance complies with the [PSR UriInterface](https://www.php-fig.org/psr/psr-7/#35-psrhttpmessageuriinterface).
 * Allows creation of **external, internal, and substitution-pattern URIs**.
 * Behaves as an immutable class (Value Object): modifying an instance will return a new one without changing the original.
 
 ## About the UriType Class
 
-If you're using Doctrine, the `Ginsen\Doctrine\Type\UriType` class allows you to map the value object 
-`Ginsen\ValueObject\Uri`. See [Custom Mapping Types](https://www.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/custom-mapping-types.html).
+If you're using Doctrine, the `Ginsen\Uri\Doctrine\Type\UriType` class allows you to map the value object 
+`Ginsen\Uri\ValueObject\Uri`. See [Custom Mapping Types](https://www.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/custom-mapping-types.html).
 
 
 ## External URI
@@ -26,7 +26,7 @@ See the following test snippet:
 
 ```php
 <?php
-# Ginsen\Tests\ValueObject\UriTest
+# Ginsen\Uri\Tests\ValueObject\UriTest
 
 #[Test]
 public function it_should_build_external_uri()
@@ -65,7 +65,7 @@ See the following test snippet:
 
 ```php
 <?php
-# Ginsen\Tests\ValueObject\UriTest
+# Ginsen\Uri\Tests\ValueObject\UriTest
 
 #[Test]
 public function it_should_build_container_uri()
@@ -101,7 +101,7 @@ See the test below:
 
 ```php
 <?php
-# Ginsen\Tests\ValueObject\UriTest
+# Ginsen\Uri\Tests\ValueObject\UriTest
 
 #[Test]
 public function it_should_build_routing_uri()
@@ -130,7 +130,7 @@ public function it_should_build_routing_uri()
 ```php
 <?php
 
-use Ginsen\ValueObject\Uri;
+use Ginsen\Uri\ValueObject\Uri;
 
 $uri = Uri::fromStr('https://foo.com/file.html?a=1&b=some+text');
 
@@ -143,7 +143,7 @@ $uri->getQueryToArray();  # ['a' => 1, 'b' => 'some text']
 ```php
 <?php
 
-use Ginsen\ValueObject\Uri;
+use Ginsen\Uri\ValueObject\Uri;
 
 $uri1 = Uri::fromStr('https://google.com');
 $uri2 = Uri::fromStr('https://google.net');
@@ -160,7 +160,7 @@ See test:
 ```php
 <?php
 
-use Ginsen\ValueObject\Uri;
+use Ginsen\Uri\ValueObject\Uri;
 
 #[Test]
 #[DataProvider('uriDataProvider')]
@@ -189,7 +189,7 @@ public static function uriDataProvider(): iterable
 ```php
 <?php
 
-use Ginsen\ValueObject\Uri;
+use Ginsen\Uri\ValueObject\Uri;
 
 Uri::isValid('https://google.com');  # true
 Uri::isValid('some text');           # false
@@ -200,7 +200,7 @@ You can also pass a custom validator (Closure):
 ```php
 <?php
 
-use Ginsen\ValueObject\Uri;
+use Ginsen\Uri\ValueObject\Uri;
 
 $uri1 = 'https://google.es';
 $uri2 = 'https://google.com';
@@ -222,7 +222,7 @@ Requires internet connection. See test:
 ```php
 <?php
 
-use Ginsen\ValueObject\Uri;
+use Ginsen\Uri\ValueObject\Uri;
 
 $uri1 = Uri::fromStr('https://github.com/ginsen/uri');
 $uri2 = Uri::fromStr('https://github.com/ginsen/uri-fake');
@@ -238,7 +238,7 @@ As a Value Object, existing instances cannot be modified.
 ```php
 <?php
 
-use Ginsen\ValueObject\Uri;
+use Ginsen\Uri\ValueObject\Uri;
 
 $uri1 = Uri::fromStr('https://github.com/ginsen/uri');
 $uri2 = $uri1->withHost('google.es');

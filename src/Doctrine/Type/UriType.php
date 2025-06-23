@@ -1,11 +1,13 @@
 <?php
 
-namespace Ginsen\Doctrine\Type;
+declare(strict_types=1);
+
+namespace Ginsen\Uri\Doctrine\Type;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Exception\InvalidType;
 use Doctrine\DBAL\Types\Type;
-use Ginsen\ValueObject\Uri;
+use Ginsen\Uri\ValueObject\Uri;
 
 class UriType extends Type
 {
